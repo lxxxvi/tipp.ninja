@@ -9,7 +9,6 @@ require:
 AllCops:
   Exclude:
   - bin/**/*
-  - db/schema.rb
   - tmp/**/*
 
 Rails:
@@ -249,19 +248,6 @@ Metrics/ClassLength:
 
 Metrics/CollectionLiteralLength:
   Enabled: true
-
-Metrics/MethodLength:
-  Exclude:
-  - app/services/nutrition_facts/journal_days.rb
-  - app/services/nutrition_facts/meal_ingredients.rb
-  - app/services/nutrition_facts/meals.rb
-  - app/services/nutrition_facts/portions.rb
-  - app/services/nutrition_facts/recipe_ingredients.rb
-  - app/services/nutrition_facts/recipes.rb
-  - app/services/vegan_detection/journal_day.rb
-  - app/services/vegan_detection/recipe.rb
-  - db/archive/migrate/*
-  - db/migrate/*
 
 Minitest/AssertInDelta:
   Enabled: true
