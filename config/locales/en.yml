@@ -1,31 +1,32 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        nickname: "Nickname"
+        password: "Password"
+        url_identifier: "URL identifier"
+  dashboards:
+    title: "Dashboard"
+  devise:
+    already_have_an_account_question: "Already have an account?"
+    at_least_n_characters: "At least %{n} characters, choose wisely..."
+    bad_memory_question: "Bad memory?"
+    change_it_now: "Change it now"
+    change_my_password: "Change my password"
+    change_your_password: "Change your password"
+    forgot_your_password_question: "Forgot your password?"
+    mailers:
+      reset_password_password_instructions:
+        greeting: "Hello %{email}!"
+        reason_for_getting_the_mail: "Someone has requested a link to change your password. You can do this through the link below."
+        ignore_if_not_requested: "If you didn't request this, please ignore this email."
+        nothing_happens_if_no_action_taken: "Your password won't change until you access the link above and create a new one."
+    new_password: "New password"
+    no_account_yet_question: "No Account yet?"
+    register_immediately_exclamation: "Register immediately!"
+    register_me_already: "Register me already..."
+    reset_password_exclamation: "Reset your password!"
+    reset_my_memory_exclamation: "Reset my memory!"
+    sign_in: "Sign in"
+    sign_out: "Sign out"

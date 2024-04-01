@@ -1,0 +1,95 @@
+alb_team:
+  fifa_code: ALB
+  name: Albania
+
+aut_team:
+  fifa_code: AUT
+  name: Austria
+
+bel_team:
+  fifa_code: BEL
+  name: Belgium
+
+cro_team:
+  fifa_code: CRO
+  name: Croatia
+
+cze_team:
+  fifa_code: CZE
+  name: Czech Republic
+
+den_team:
+  fifa_code: DEN
+  name: Denmark
+
+eng_team:
+  fifa_code: ENG
+  name: England
+
+esp_team:
+  fifa_code: ESP
+  name: Spain
+
+fra_team:
+  fifa_code: FRA
+  name: France
+
+geo_team:
+  fifa_code: GEO
+  name: Georgia
+
+ger_team:
+  fifa_code: GER
+  name: Germany
+
+hun_team:
+  fifa_code: HUN
+  name: Hungary
+
+ita_team:
+  fifa_code: ITA
+  name: Italy
+
+ned_team:
+  fifa_code: NED
+  name: Netherlands
+
+pol_team:
+  fifa_code: POL
+  name: Poland
+
+por_team:
+  fifa_code: POR
+  name: Portugal
+
+rou_team:
+  fifa_code: ROU
+  name: Romania
+
+sco_team:
+  fifa_code: SCO
+  name: Scotland
+
+srb_team:
+  fifa_code: SRB
+  name: Serbia
+
+sui_team:
+  fifa_code: SUI
+  name: Switzerland
+
+svk_team:
+  fifa_code: SVK
+  name: Slovakia
+
+swe_team:
+  fifa_code: SWE
+  name: Sweden
+
+tur_team:
+  fifa_code: TUR
+  name: Turkey
+
+ukr_team:
+  fifa_code: UKR
+  name: Ukraine
