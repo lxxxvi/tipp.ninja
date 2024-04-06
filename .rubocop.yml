@@ -9,6 +9,7 @@ require:
 AllCops:
   Exclude:
   - bin/**/*
+  - db/schema.rb
   - tmp/**/*
   - vendor/**/*
 

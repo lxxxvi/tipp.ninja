@@ -1,0 +1,8 @@
+DEFAULTS: &DEFAULTS
+  encrypted_password: "$2a$12$F0Ad9xiL5tXGD6NgfaRdR.0twPFBOUy.0VXDdVVN4aFN5EVjcvWcW" # abcdefgh
+
+antoine:
+  <<: *DEFAULTS
+  url_identifier: "antoine-URL"
+  nickname: "antoine"
+  email: "antoine@example.com"

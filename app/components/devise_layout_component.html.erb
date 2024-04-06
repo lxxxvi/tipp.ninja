@@ -1,0 +1,47 @@
+<div class="flex flex-col">
+  <div class="h-[20svh] flex items-center justify-center">
+    <h2 class="text-purple-400 text-5xl font-bold text-center"><%= title %></h2>
+  </div>
+
+  <div class="grow flex flex-col p-10 gap-y-10">
+    <% if messages.any? %>
+      <div class="flashes p-6 bg-stone-800 text-xl rounded-2xl text-stone-300">
+        <% messages.each do |message| %>
+          <div class="flash">
+            <%= message %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="flex flex-col gap-y-16">
+      <div>
+        <%= content %>
+      </div>
+
+      <% if links.any? %>
+      <div class="flex flex-col gap-y-8">
+        <% if links.include?(:sign_in) %>
+          <div class="flex flex-col items-center">
+            <p class="text-stone-500 text-lg"><%= t("devise.already_have_an_account_question") %></p>
+            <%= link_to t("devise.sign_in"), new_user_session_path, class: "text-green-400 text-lg" %>
+          </div>
+        <% end %>
+
+        <% if links.include?(:register) %>
+          <div class="flex flex-col items-center">
+            <p class="text-stone-500 text-lg"><%= t("devise.no_account_yet_question") %></p>
+            <%= link_to t("devise.register_immediately_exclamation"), new_registration_path(resource_name), class: "text-green-400 text-lg" %>
+          </div>
+        <% end %>
+
+        <% if links.include?(:reset_password) %>
+          <div class="flex flex-col items-center">
+            <p class="text-stone-500 text-lg"><%= t("devise.bad_memory_question") %></p>
+            <%= link_to t("devise.reset_password_exclamation"), new_password_path(resource_name), class: "text-green-400 text-lg" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
