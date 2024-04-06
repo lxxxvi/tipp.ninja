@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Open-Source-online-fun-non-monetary-betting-platform for the UEFA EURO 2024 in Germany.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Download repository, have Ruby and Postgres ready, then run:
 
-* System dependencies
+```sh
+bin/setup
+```
 
-* Configuration
+Ttart the development environment
 
-* Database creation
+```sh
+bin/dev
+```
 
-* Database initialization
+## Tests
 
-* How to run the test suite
+Run
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+bin/test
+```
