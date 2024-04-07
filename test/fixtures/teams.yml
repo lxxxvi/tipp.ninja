@@ -1,95 +1,119 @@
 alb_team:
-  fifa_code: ALB
-  name: Albania
+  fifa_code: "ALB"
+  name: "Albania"
+  flag: "🇦🇱"
 
 aut_team:
-  fifa_code: AUT
-  name: Austria
+  fifa_code: "AUT"
+  name: "Austria"
+  flag: "🇦🇹"
 
 bel_team:
-  fifa_code: BEL
-  name: Belgium
+  fifa_code: "BEL"
+  name: "Belgium"
+  flag: "🇧🇪"
 
 cro_team:
-  fifa_code: CRO
-  name: Croatia
+  fifa_code: "CRO"
+  name: "Croatia"
+  flag: "🇭🇷"
 
 cze_team:
-  fifa_code: CZE
-  name: Czech Republic
+  fifa_code: "CZE"
+  name: "Czech Republic"
+  flag: "🇨🇿"
 
 den_team:
-  fifa_code: DEN
-  name: Denmark
+  fifa_code: "DEN"
+  name: "Denmark"
+  flag: "🇩🇰"
 
 eng_team:
-  fifa_code: ENG
-  name: England
+  fifa_code: "ENG"
+  name: "England"
+  flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
 
 esp_team:
-  fifa_code: ESP
-  name: Spain
+  fifa_code: "ESP"
+  name: "Spain"
+  flag: "🇪🇸"
 
 fra_team:
-  fifa_code: FRA
-  name: France
+  fifa_code: "FRA"
+  name: "France"
+  flag: "🇫🇷"
 
 geo_team:
-  fifa_code: GEO
-  name: Georgia
+  fifa_code: "GEO"
+  name: "Georgia"
+  flag: "🇬🇪"
 
 ger_team:
-  fifa_code: GER
-  name: Germany
+  fifa_code: "GER"
+  name: "Germany"
+  flag: "🇩🇪"
 
 hun_team:
-  fifa_code: HUN
-  name: Hungary
+  fifa_code: "HUN"
+  name: "Hungary"
+  flag: "🇭🇺"
 
 ita_team:
-  fifa_code: ITA
-  name: Italy
+  fifa_code: "ITA"
+  name: "Italy"
+  flag: "🇮🇹"
 
 ned_team:
-  fifa_code: NED
-  name: Netherlands
+  fifa_code: "NED"
+  name: "Netherlands"
+  flag: "🇳🇱"
 
 pol_team:
-  fifa_code: POL
-  name: Poland
+  fifa_code: "POL"
+  name: "Poland"
+  flag: "🇵🇱"
 
 por_team:
-  fifa_code: POR
-  name: Portugal
+  fifa_code: "POR"
+  name: "Portugal"
+  flag: "🇵🇹"
 
 rou_team:
-  fifa_code: ROU
-  name: Romania
+  fifa_code: "ROU"
+  name: "Romania"
+  flag: "🇷🇴"
 
 sco_team:
-  fifa_code: SCO
-  name: Scotland
+  fifa_code: "SCO"
+  name: "Scotland"
+  flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿󠁧󠁢󠁳󠁣󠁴󠁿"
 
 srb_team:
-  fifa_code: SRB
-  name: Serbia
+  fifa_code: "SRB"
+  name: "Serbia"
+  flag: "🇷🇸"
 
 sui_team:
-  fifa_code: SUI
-  name: Switzerland
+  fifa_code: "SUI"
+  name: "Switzerland"
+  flag: "🇨🇭"
 
 svk_team:
-  fifa_code: SVK
-  name: Slovakia
+  fifa_code: "SVK"
+  name: "Slovakia"
+  flag: "🇸🇰"
 
 swe_team:
-  fifa_code: SWE
-  name: Sweden
+  fifa_code: "SWE"
+  name: "Sweden"
+  flag: "🇸🇪"
 
 tur_team:
-  fifa_code: TUR
-  name: Turkey
+  fifa_code: "TUR"
+  name: "Turkey"
+  flag: "🇹🇷"
 
 ukr_team:
-  fifa_code: UKR
-  name: Ukraine
+  fifa_code: "UKR"
+  name: "Ukraine"
+  flag: "🇺🇦"

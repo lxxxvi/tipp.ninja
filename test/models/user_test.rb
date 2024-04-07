@@ -39,4 +39,8 @@ class UserTest < ActiveSupport::TestCase
 
     assert_equal user.url_identifier, user.nickname
   end
+
+  test "to_param" do
+    assert_equal "xANTOINE", users(:antoine).to_param
+  end
 end

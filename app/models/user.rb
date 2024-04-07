@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -15,6 +13,10 @@ class User < ApplicationRecord
   belongs_to :rooting_for_team, optional: true, class_name: "Team"
 
   before_validation :initialize_fields, if: :new_record?
+
+  def to_param
+    url_identifier
+  end
 
   private
 

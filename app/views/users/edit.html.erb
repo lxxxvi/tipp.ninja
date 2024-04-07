@@ -1,0 +1,29 @@
+<%= render AppLayoutComponent.new(user: current_user) do |c| %>
+  <% c.with_title_content(t("users.actions.edit_profile")) %>
+  <% c.with_primary_action do %>
+      <%= link_to user_path(@user), title: t("shared.actions.back"), class: "circle-button" do %>
+        <%= render HeroiconComponent.new(:"chevron-left") %>
+      <% end %>
+
+  <% end %>
+
+  <%= form_with(model: @user) do |f| %>
+    <div class="flex flex-col gap-y-8">
+      <div class="flex flex-col gap-y-4">
+        <div class="field">
+          <%= f.label :nickname, class: "label" %>
+          <%= f.text_field :nickname, class: "input" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :rooting_for_team_id, class: "label" %>
+          <%= f.select :rooting_for_team_id, Team.ordered_by_fifa_code.map { _1.decorate.to_option }, {include_blank: t("shared.please_select")}, class: "input" %>
+        </div>
+      </div>
+
+      <div class="actions flex flex-col gap-y-4 items-center">
+        <%= f.submit t("shared.actions.save"), class: "button" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

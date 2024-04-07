@@ -2,6 +2,8 @@ require "test_helper"
 require "capybara/rails"
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
+  include Devise::Test::IntegrationHelpers
+
   driven_by :rack_test
 
   # def sign_in_user(fixture_key, password = "abc")
@@ -14,6 +16,10 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
 
   def sign_out
     click_button "Sign out"
+  end
+
+  def sign_in_user(fixture_key)
+    sign_in users(fixture_key)
   end
 
   # def navigate_to(menu_item)
