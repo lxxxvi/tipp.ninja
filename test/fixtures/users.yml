@@ -3,6 +3,13 @@ DEFAULTS: &DEFAULTS
 
 antoine:
   <<: *DEFAULTS
-  url_identifier: "antoine-URL"
+  url_identifier: "xANTOINE"
   nickname: "antoine"
   email: "antoine@example.com"
+  rooting_for_team: fra_team
+
+bruno:
+  <<: *DEFAULTS
+  url_identifier: "xBRUNO"
+  nickname: "bruno"
+  email: "bruno@example.com"

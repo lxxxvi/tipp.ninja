@@ -17,8 +17,6 @@ class RegistrationsTest < ApplicationSystemTestCase
     click_button "Register"
 
     assert_selector "h2", text: "Dashboard"
-
-    assert_button "Sign out"
   end
 
   test "user fails to register" do

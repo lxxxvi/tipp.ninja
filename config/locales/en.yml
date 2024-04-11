@@ -4,8 +4,17 @@ en:
       user:
         email: "Email"
         nickname: "Nickname"
+        locale: "Language"
         password: "Password"
         url_identifier: "URL identifier"
+      team:
+        fifa_code: "FIFA code"
+        flag: "Flag"
+        name: "Name"
+  bets:
+    title: "Bets"
+  community:
+    title: "Community"
   dashboards:
     title: "Dashboard"
   devise:
@@ -30,3 +39,14 @@ en:
     reset_my_memory_exclamation: "Reset my memory!"
     sign_in: "Sign in"
     sign_out: "Sign out"
+  shared:
+    actions:
+      save: "Save"
+    not_available_short: "N/A"
+    please_select: "Please select"
+    profile: "Profile"
+  users:
+    rooting_for: "Rooting for"
+    rooting_for_team_not_picked_yet: "Not picked yet"
+    actions:
+      edit_profile: "Edit profile"

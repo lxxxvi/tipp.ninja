@@ -27,4 +27,18 @@ class SessionsTest < ApplicationSystemTestCase
     assert_selector "h2", text: "Sign in"
     assert_selector ".flash", text: "Invalid Email or password."
   end
+
+  test "user signs out" do
+    sign_in_user :antoine
+
+    visit "/dashboard"
+
+    click_link "Profile"
+
+    click_button "Sign out"
+
+    click_link "Let's go"
+
+    assert_selector "h2", text: "Sign in"
+  end
 end

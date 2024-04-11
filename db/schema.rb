@@ -17,8 +17,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_01_002000) do
   create_table "teams", force: :cascade do |t|
     t.string "fifa_code", null: false
     t.string "name", null: false
+    t.string "flag", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["fifa_code"], name: "index_teams_on_fifa_code", unique: true
+    t.index ["flag"], name: "index_teams_on_flag", unique: true
+    t.index ["name"], name: "index_teams_on_name", unique: true
   end
 
   create_table "users", force: :cascade do |t|

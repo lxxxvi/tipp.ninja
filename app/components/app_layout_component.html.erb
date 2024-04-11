@@ -1,0 +1,24 @@
+<div>
+  <nav class="flex justify-between m-8">
+    <%= link_to t("dashboards.title"), dashboard_path, class: "nav-link" %>
+    <%= link_to t("bets.title"), dashboard_path, class: "nav-link" %>
+    <%= link_to t("community.title"), dashboard_path, class: "nav-link" %>
+    <%= link_to t("shared.profile"), user_path(user), class: "nav-link" %>
+  </nav>
+
+  <main class="m-8 flex flex-col gap-y-8">
+    <div class="flex justify-between items-center">
+      <h2 class="h2"><%= title %></h2>
+
+      <% if primary_action.present? %>
+        <div>
+          <%= primary_action %>
+        </div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= content %>
+    </div>
+  </main>
+</div>
