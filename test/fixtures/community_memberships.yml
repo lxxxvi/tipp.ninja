@@ -1,0 +1,51 @@
+# Global
+global_antoine:
+  community: global
+  user: antoine
+  role: "member"
+  ranking_position: 0
+
+global_kylian:
+  community: global
+  user: kylian
+  role: "member"
+  ranking_position: 0
+
+global_bruno:
+  community: global
+  user: bruno
+  role: "member"
+  ranking_position: 0
+
+# Les Bleus
+les_bleus_antoine:
+  community: les_bleus
+  user: antoine
+  role: "owner"
+  ranking_position: 0
+
+les_bleus_kylian:
+  community: les_bleus
+  user: kylian
+  role: "member"
+  ranking_position: 0
+
+# Les Bleus
+france_antoine:
+  community: france
+  user: antoine
+  role: "member"
+  ranking_position: 0
+
+france_kylian:
+  community: france
+  user: kylian
+  role: "owners"
+  ranking_position: 0
+
+# La Roja
+la_roja_bruno:
+  community: la_roja
+  user: bruno
+  role: "owner"
+  ranking_position: 0

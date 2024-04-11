@@ -1,0 +1,11 @@
+<%= render AppLayoutComponent.new(user: current_user) do |c| %>
+  <% c.with_title_content(t("communities.actions.edit_community")) %>
+
+  <% c.with_primary_action do %>
+    <%= link_to @community, title: t("shared.actions.back"), class: "circle-button" do %>
+      <%= render HeroiconComponent.new(:"chevron-left") %>
+    <% end %>
+  <% end %>
+
+  <%= render "form", community: @community %>
+<% end %>

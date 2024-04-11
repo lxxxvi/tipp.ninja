@@ -1,6 +1,10 @@
 en:
   activerecord:
     attributes:
+      community:
+        accesses:
+          private: "Via invitation link, Private"
+          public: "Everyone, Public"
       user:
         email: "Email"
         nickname: "Nickname"
@@ -13,8 +17,15 @@ en:
         name: "Name"
   bets:
     title: "Bets"
-  community:
-    title: "Community"
+  communities:
+    actions:
+      new_community: "New community"
+      edit_community: "Edit community"
+    title: "Communities"
+    my_communities: "My communities"
+    n_members:
+      one: "1 member"
+      other: "%{count} members"
   dashboards:
     title: "Dashboard"
   devise:
@@ -41,6 +52,7 @@ en:
     sign_out: "Sign out"
   shared:
     actions:
+      create: "Create"
       save: "Save"
     not_available_short: "N/A"
     please_select: "Please select"

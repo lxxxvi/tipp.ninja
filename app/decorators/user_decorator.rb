@@ -1,4 +1,8 @@
 class UserDecorator < ApplicationDecorator
+  def display_nickname_with_flag
+    "#{record.nickname} #{display_rooting_for_team_flag}"
+  end
+
   def display_rooting_for_team_flag
     record.rooting_for_team&.flag || "🏁"
   end

@@ -10,6 +10,10 @@
   @apply text-purple-400 text-3xl;
 }
 
+.h3 {
+  @apply text-green-300 text-base uppercase;
+}
+
 .input {
   @apply bg-black text-stone-200 rounded-3xl text-xl px-6 border-stone-500 border-2 focus:border-green-400 focus:ring-green-400 w-full placeholder:text-stone-600;
 }
@@ -23,11 +27,11 @@
 }
 
 .circle-button {
-  @apply text-stone-500 block h-8 w-8 rounded-full p-1 border-2 border-stone-500;
+  @apply text-stone-500 block h-8 w-8 rounded-full p-1 border-2 border-stone-500 flex items-center justify-center;
 }
 
 .transparent-button {
-  @apply text-2xl py-2 rounded-3xl w-full text-center
+  @apply text-2xl py-2 rounded-3xl w-full text-center;
 }
 
 .nav-link {

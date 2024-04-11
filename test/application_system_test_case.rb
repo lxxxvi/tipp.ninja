@@ -46,4 +46,12 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
 
     :selenium_headless
   end
+
+  def assert_data_test(selector, **args)
+    assert_selector("[data-test='#{selector}']", **args)
+  end
+
+  def assert_no_data_test(selector, **args)
+    assert_no_selector("[data-test='#{selector}']", **args)
+  end
 end

@@ -1,18 +1,22 @@
 class User < ApplicationRecord
+  include UrlIdentifiable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  attr_readonly :url_identifier
-
   encrypts :email, deterministic: true
 
-  validates :url_identifier, :nickname, presence: true
-  validates :url_identifier, uniqueness: true
+  validates :nickname, presence: true
   validates :nickname, uniqueness: true
 
   belongs_to :rooting_for_team, optional: true, class_name: "Team"
 
+  has_many :community_memberships, dependent: :destroy
+  has_many :communities, through: :community_memberships
+
   before_validation :initialize_fields, if: :new_record?
+
+  after_create :add_to_global_team!
 
   def to_param
     url_identifier
@@ -21,7 +25,10 @@ class User < ApplicationRecord
   private
 
   def initialize_fields
-    self.url_identifier ||= SecureRandom.alphanumeric(8)
     self.nickname ||= url_identifier
+  end
+
+  def add_to_global_team!
+    community_memberships.find_or_initialize_by(community: Community.global).save!
   end
 end

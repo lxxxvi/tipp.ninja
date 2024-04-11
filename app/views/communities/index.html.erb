@@ -1,0 +1,26 @@
+<%= render AppLayoutComponent.new(user: current_user) do |c| %>
+  <% c.with_title_content(t("communities.title")) %>
+  <% if policy(Community).create? %>
+    <% c.with_primary_action do %>
+      <%= link_to new_community_path, title: t("communities.actions.new_community"), class: "circle-button" do %>
+        <%= render HeroiconComponent.new(:plus) %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <div class="flex flex-col gap-y-4">
+    <h3 class="h3"><%= t("communities.my_communities") %></h3>
+
+    <ul class="flex flex-col gap-y-4">
+      <% @communities.each do |community| %>
+        <li>
+          <%= link_to community_path(community) do %>
+            <div class="rounded-2xl bg-stone-800 p-8 text-2xl">
+              <%= community.name %>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

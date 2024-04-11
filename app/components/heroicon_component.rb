@@ -1,6 +1,6 @@
 class HeroiconComponent < ViewComponent::Base
   DEFAULT_OPTIONS = {
-    class: "w-6 h-6"
+    class: "w-6 h-6 flex items-center justify-center"
   }.freeze
 
   def initialize(icon_key, options = {})

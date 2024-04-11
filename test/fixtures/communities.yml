@@ -1,0 +1,31 @@
+global:
+  url_identifier: "global"
+  name: "Global"
+  invitation_token: "NONE"
+  access: "public"
+  members_count: 3
+  average_points: 0
+
+les_bleus:
+  url_identifier: "xLESBLEUS"
+  name: "Les Bleus"
+  invitation_token: "INVITATION-TOKEN-LES-BLEUS"
+  access: "private"
+  members_count: 2
+  average_points: 0
+
+france:
+  url_identifier: "xFRANCE"
+  name: "France"
+  invitation_token: "INVITATION-TOKEN-FRANCE"
+  access: "public"
+  members_count: 2
+  average_points: 0
+
+la_roja:
+  url_identifier: "xLAROJA"
+  name: "La Roja"
+  invitation_token: "INVITATION-TOKEN-LA-ROJA"
+  access: "private"
+  members_count: 1
+  average_points: 0

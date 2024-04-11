@@ -10,9 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_01_002000) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_01_003001) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "communities", force: :cascade do |t|
+    t.string "url_identifier", null: false
+    t.string "name", null: false
+    t.string "invitation_token", null: false
+    t.integer "members_count", default: 1, null: false
+    t.integer "average_points", default: 0, null: false
+    t.string "access", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["invitation_token"], name: "index_communities_on_invitation_token", unique: true
+    t.index ["name"], name: "index_communities_on_name", unique: true
+    t.index ["url_identifier"], name: "index_communities_on_url_identifier", unique: true
+  end
+
+  create_table "community_memberships", force: :cascade do |t|
+    t.bigint "community_id", null: false
+    t.bigint "user_id", null: false
+    t.string "role", default: "member", null: false
+    t.integer "ranking_position", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["community_id", "user_id"], name: "index_community_memberships_on_community_id_and_user_id", unique: true
+    t.index ["community_id"], name: "index_community_memberships_on_community_id"
+    t.index ["user_id"], name: "index_community_memberships_on_user_id"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string "fifa_code", null: false
@@ -30,6 +56,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_01_002000) do
     t.string "nickname", null: false
     t.string "email", null: false
     t.string "locale", default: "en", null: false
+    t.boolean "admin", default: false, null: false
     t.bigint "rooting_for_team_id"
     t.string "encrypted_password", null: false
     t.string "reset_password_token"
@@ -44,5 +71,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_01_002000) do
     t.index ["url_identifier"], name: "index_users_on_url_identifier", unique: true
   end
 
+  add_foreign_key "community_memberships", "communities"
+  add_foreign_key "community_memberships", "users"
   add_foreign_key "users", "teams", column: "rooting_for_team_id"
 end
