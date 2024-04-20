@@ -31,13 +31,17 @@ class UserTest < ActiveSupport::TestCase
     user = User.new(email: "ronaldo@example.com", password: "abcdefgh")
 
     assert_difference -> { User.count }, +1 do
-      assert user.save!
+      assert_difference -> { CommunityMembership.count }, +1 do
+        assert user.save!
+      end
     end
 
     assert_predicate user.url_identifier, :present?
     assert_predicate user.nickname, :present?
 
     assert_equal user.url_identifier, user.nickname
+
+    assert_equal communities(:global), Community.user_is_member_of(user).sole
   end
 
   test "to_param" do

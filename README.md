@@ -10,7 +10,7 @@ Download repository, have Ruby and Postgres ready, then run:
 bin/setup
 ```
 
-Ttart the development environment
+Start the development environment
 
 ```sh
 bin/dev

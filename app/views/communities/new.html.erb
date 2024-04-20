@@ -1,0 +1,5 @@
+<%= render AppLayoutComponent.new(user: current_user) do |c| %>
+  <% c.with_title_content(t("communities.actions.new_community")) %>
+
+  <%= render "form", community: @community %>
+<% end %>

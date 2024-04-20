@@ -1,0 +1,44 @@
+<%= render AppLayoutComponent.new(user: current_user) do |c| %>
+  <% c.with_title_content(@community.name) %>
+
+  <% if policy(@community).edit? %>
+    <% c.with_primary_action do %>
+      <%= link_to edit_community_path(@community), title: t("communities.actions.edit_community"), class: "circle-button" do %>
+        <%= render HeroiconComponent.new(:pencil) %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <div class="flex flex-col gap-y-4">
+    <% unless @community.global? %>
+      <div data-test="community-invitation-token" class="font-mono">
+        <%= @community.invitation_token %>
+      </div>
+    <% end %>
+
+    <div class="flex justify-between items-baseline">
+      <h3 class="h3 grow"><%= t("communities.ranking") %></h3>
+
+      <div class="text-stone-500" data-test="community-members-count">
+        <%= t("communities.n_members", count: @community.members_count) %>
+      </div>
+    </div>
+
+    <ul class="rounded-2xl overflow-hidden divide-y-2 divide-black">
+      <% @community.community_memberships.ordered_by_ranking_position_then_user_nickname.each do |community_membership| %>
+        <li data-test="community-member">
+          <div class="p-6 bg-stone-900 text-xl flex justify-between">
+            <div>
+              <%= community_membership.decorate.display_ranking_position %>
+              <%= community_membership.user.decorate.display_nickname_with_flag %>
+            </div>
+
+            <div>
+              <%= link_to "SHOW", user_path(community_membership.user) %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

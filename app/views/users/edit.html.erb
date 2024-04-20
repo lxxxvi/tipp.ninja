@@ -1,10 +1,9 @@
 <%= render AppLayoutComponent.new(user: current_user) do |c| %>
   <% c.with_title_content(t("users.actions.edit_profile")) %>
   <% c.with_primary_action do %>
-      <%= link_to user_path(@user), title: t("shared.actions.back"), class: "circle-button" do %>
-        <%= render HeroiconComponent.new(:"chevron-left") %>
-      <% end %>
-
+    <%= link_to user_path(@user), title: t("shared.actions.back"), class: "circle-button" do %>
+      <%= render HeroiconComponent.new(:"chevron-left") %>
+    <% end %>
   <% end %>
 
   <%= form_with(model: @user) do |f| %>

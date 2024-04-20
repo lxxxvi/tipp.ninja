@@ -8,6 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.string :nickname, null: false
       t.string :email, null: false
       t.string :locale, null: false, default: "en"
+      t.boolean :admin, null: false, default: false
       t.references :rooting_for_team, null: true, foreign_key: { to_table: :teams }, index: true
       t.string :encrypted_password, null: false
 
