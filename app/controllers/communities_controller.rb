@@ -5,6 +5,7 @@ class CommunitiesController < ApplicationController
 
   def show
     @community = authorize(find_community)
+    @current_users_membership = @community.community_memberships.find_by(user: current_user)
   end
 
   def new

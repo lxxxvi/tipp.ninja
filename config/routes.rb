@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   resource :dashboard, only: %i[show]
   resources :users, only: %i[show edit update]
-  resources :communities
+  resources :communities do
+    resources :memberships, only: %i[new create destroy], shallow: true
+  end
 
   root "root#index"
 end

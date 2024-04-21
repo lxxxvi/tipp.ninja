@@ -94,16 +94,6 @@ class CommunitiesTest < ApplicationSystemTestCase
     # TODO: cannot destroy, CANNOT leave
   end
 
-  test "user joins public community" do
-    sign_in_user :bruno
-
-    visit community_path(communities(:france))
-
-    assert_community_name "France"
-
-    skip "TODO later"
-  end
-
   private
 
   def assert_community_name(text)

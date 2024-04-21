@@ -32,14 +32,14 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     Capybara.using_driver(find_driver, &)
   end
 
-  def click_with_delete(element)
-    if Capybara.current_driver == :rack_test
-      page.driver.submit :delete, element["href"], {}
-    else
-      element.click
-      accept_alert
-    end
-  end
+  # def click_with_delete(element)
+  #   if Capybara.current_driver == :rack_test
+  #     page.driver.submit :delete, element["href"], {}
+  #   else
+  #     element.click
+  #     accept_alert
+  #   end
+  # end
 
   def find_driver
     return :selenium if ENV["DEBUG"].present?

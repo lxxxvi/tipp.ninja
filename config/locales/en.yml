@@ -21,6 +21,7 @@ en:
     actions:
       new_community: "New community"
       edit_community: "Edit community"
+      leave_community: "Leave community"
     title: "Communities"
     my_communities: "My communities"
     n_members:
@@ -51,6 +52,7 @@ en:
     sign_in: "Sign in"
     sign_out: "Sign out"
   shared:
+    are_you_sure_question: "Are you sure?"
     actions:
       create: "Create"
       save: "Save"

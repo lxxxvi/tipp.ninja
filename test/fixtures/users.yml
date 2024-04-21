@@ -19,3 +19,9 @@ kylian:
   url_identifier: "xKYLIAN"
   nickname: "kylian"
   email: "kylian@example.com"
+
+zinedine:
+  <<: *DEFAULTS
+  url_identifier: "xZINEDINE"
+  nickname: "zinedine"
+  email: "zinedine@example.com"

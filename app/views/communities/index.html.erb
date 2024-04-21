@@ -14,10 +14,8 @@
     <ul class="flex flex-col gap-y-4">
       <% @communities.each do |community| %>
         <li>
-          <%= link_to community_path(community) do %>
-            <div class="rounded-2xl bg-stone-800 p-8 text-2xl">
-              <%= community.name %>
-            </div>
+          <%= link_to community_path(community), class: "flex rounded-2xl bg-stone-800 p-8 text-2xl" do %>
+            <%= community.name %>
           <% end %>
         </li>
       <% end %>

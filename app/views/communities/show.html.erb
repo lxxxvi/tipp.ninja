@@ -40,5 +40,9 @@
         </li>
       <% end %>
     </ul>
+
+    <% if @current_users_membership.present? %>
+      <%= button_to t("communities.actions.leave_community"), membership_path(@current_users_membership), class: "transparent-button", method: :delete, "data-turbo-confirm": t("shared.are_you_sure_question") %>
+    <% end %>
   </div>
 <% end %>
